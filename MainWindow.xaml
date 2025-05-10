@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp.QuadraticEquationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Решение квадратных уравнений" Height="350" Width="400">
+    <Grid Margin="10,10,0,10" HorizontalAlignment="Left" Width="380">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Введите коэффициенты первого уравнения:" VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="1" Text="Коэффициент a:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="InputA" Grid.Row="1" Width="100" Margin="5" VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="2" Text="Коэффициент b:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="InputB" Grid.Row="2" Width="100" Margin="5" VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="3" Text="Коэффициент c:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="InputC" Grid.Row="3" Width="100" Margin="5" VerticalAlignment="Center" />
+
+        <Button x:Name="SolveButton" Grid.Row="4" Content="Решить" Width="100" Margin="5" VerticalAlignment="Center" Click="SolveButton_Click" />
+
+        <TextBlock x:Name="ResultLabel" Grid.Row="5" Text="Результаты:" VerticalAlignment="Center" />
+        <TextBlock x:Name="RootsTextBlock" Grid.Row="5" Text="Корни уравнения: " VerticalAlignment="Top" Margin="0,27,0,0" />
+
+        <Button x:Name="CheckOperationsButton" Grid.Row="7" Content="Проверить операции" Width="200" Margin="5" VerticalAlignment="Center" Click="CheckOperationsButton_Click" />
+    </Grid>
+</Window>
